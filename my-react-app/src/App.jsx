@@ -13,7 +13,7 @@ function App() {
 
      
       <div className="ticks">
-        <h1>helol</h1>
+        <h1>helo world</h1>
       </div>
       
     </>
