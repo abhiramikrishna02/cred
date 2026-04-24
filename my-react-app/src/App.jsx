@@ -1,23 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Services from "./Pages/Services";
+import Contacts from "./Pages/Contacts";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      
-
-     
-      <div className="ticks">
-        <h1>helo world</h1>
-      </div>
-      
-    </>
-  )
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contacts />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
