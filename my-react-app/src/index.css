@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: #000;
+}
+
 .hero-bg {
   position: absolute;
   width: 110%;

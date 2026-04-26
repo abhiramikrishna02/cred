@@ -216,7 +216,7 @@ function PhoneCluster({ scrollTriggerRef, insideTextRef }) {
     tl.to(phones[2].position, { z: 25, duration: 2, ease: "expo.in" }, 6.0);
     tl.to(phones[2].scale, { x: 300, y: 300, z: 300, duration: 2, ease: "expo.in" }, 6.0);
     phones.forEach((phone, index) => { if (index !== 2) tl.to(phone.scale, { x: 0, y: 0, z: 0, duration: 0.5 }, 6.0); });
-    
+
     tl.to(cardRef.current.scale, { x: 1, y: 1, z: 1, duration: 1.5, ease: "back.out(1.2)" }, 7.5);
     if (insideTextRef?.current) { tl.to(insideTextRef.current, { autoAlpha: 1, y: 0, duration: 1 }, 7.5); }
 
