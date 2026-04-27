@@ -1506,7 +1506,7 @@ function Services() {
               },
             ].map((slide, index) => (
               <div className="hscroll-item" key={index} style={{
-                backgroundImage: `url('./sample.jpg')`,
+                backgroundImage: `url('/sample.jpg')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
