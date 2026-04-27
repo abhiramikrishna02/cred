@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, Suspense } from "react";
+﻿import { useEffect, useRef, useState, Suspense } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
@@ -7,8 +7,8 @@ import * as THREE from "three";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// ─── PHONE SCREEN CONTENT (premium CRED-style) ───────────────────────────────
-function PhoneScreenContent({ word = "friends", dark = false }) {
+// â”€â”€â”€ PHONE SCREEN CONTENT (premium CRED-style) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+export function PhoneScreenContent({ word = "friends", dark = false }) {
   if (dark) {
     return (
       <div
@@ -166,7 +166,7 @@ function PhoneScreenContent({ word = "friends", dark = false }) {
           Pay with CRED UPI
         </div>
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
-          {["◈ Contacts", "# Phone", "⬡ UPI ID"].map((l) => (
+          {["â—ˆ Contacts", "# Phone", "â¬¡ UPI ID"].map((l) => (
             <div
               key={l}
               style={{
@@ -186,8 +186,8 @@ function PhoneScreenContent({ word = "friends", dark = false }) {
   );
 }
 
-// ─── iPHONE GLB MODEL ─────────────────────────────────────────────────────────
-function IPhoneModel({ word, dark }) {
+// â”€â”€â”€ iPHONE GLB MODEL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+export function IPhoneModel({ word, dark }) {
   const { scene } = useGLTF("/iphone_17_pro.glb");
 
   useEffect(() => {
@@ -229,7 +229,7 @@ function IPhoneModel({ word, dark }) {
   );
 }
 
-function ScrollPhone({ prog }) {
+export function ScrollPhone({ prog }) {
   const groupRef = useRef(null);
   const [word, setWord] = useState("friends");
   const wordRef = useRef("friends");
@@ -337,7 +337,7 @@ function ScrollPhone({ prog }) {
   );
 }
 
-function CinematicCamera({ prog }) {
+export function CinematicCamera({ prog }) {
   const { camera } = useThree();
 
   const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
@@ -395,7 +395,7 @@ function CinematicCamera({ prog }) {
   return null;
 }
 
-function PhonePortal() {
+export function PhonePortal() {
   const sectionRef = useRef(null);
   const prog = useRef(0);
 
@@ -635,7 +635,7 @@ function PhonePortal() {
   );
 }
 
-function Hero() {
+export function Hero() {
   const sectionRef = useRef(null);
   const videoWrapRef = useRef(null);
   const videoRef = useRef(null);
@@ -978,28 +978,28 @@ function Hero() {
   );
 }
 
-// ─── HORIZONTAL SERVICES (unchanged) ─────────────────────────────────────────
-function ServicesHScroll() {
+// â”€â”€â”€ HORIZONTAL SERVICES (unchanged) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+export function ServicesHScroll() {
   const viewportRef = useRef(null);
   const trackRef = useRef(null);
   const slides = [
     {
       num: "01",
-      tag: "01 / 03 — Design",
+      tag: "01 / 03 â€” Design",
       title: ["UI/UX", "Design"],
       desc: "We don't design screens. We design how people feel while using them. Every pixel carries intention.",
       accent: "rgba(181,255,77,0.05)",
     },
     {
       num: "02",
-      tag: "02 / 03 — Engineering",
+      tag: "02 / 03 â€” Engineering",
       title: ["Frontend", "Dev"],
       desc: "Fast. Fluid. Alive. Every interaction matters. We build interfaces that feel inevitable.",
       accent: "rgba(100,200,255,0.04)",
     },
     {
       num: "03",
-      tag: "03 / 03 — Motion",
+      tag: "03 / 03 â€” Motion",
       title: ["3D &", "Motion"],
       desc: "Because static is forgettable. We make your brand breathe, move, and command attention.",
       accent: "rgba(255,100,150,0.04)",
@@ -1125,8 +1125,8 @@ function ServicesHScroll() {
   );
 }
 
-// ─── CSS ──────────────────────────────────────────────────────────────────────
-const styles = `
+// â”€â”€â”€ CSS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+export const styles = `
   :root { --black:#080808; --off-black:#0d0d0d; --panel:#111; --green:#b5ff4d; --green-dim:#7db835; --green-glow:rgba(181,255,77,0.12); --green-glow-hard:rgba(181,255,77,0.25); --white:#f0f0f0; --muted:#444; --glass:rgba(255,255,255,0.04); --glass-border:rgba(255,255,255,0.07); }
   .services-page,.services-page *,.services-page *::before,.services-page *::after{box-sizing:border-box}
   .services-page{scroll-behavior:auto;background:var(--black);color:var(--white);font-family:"DM Sans",sans-serif;overflow-x:hidden;cursor:auto;min-height:100vh}
@@ -1196,7 +1196,8 @@ const styles = `
   @media(max-width:768px){.features-grid{grid-template-columns:1fr}.hscroll-item{width:85vw}.process-steps{flex-direction:column;gap:3rem}.process-progress-rail{display:none}}
 `;
 
-// ─── ROOT ─────────────────────────────────────────────────────────────────────
+// â”€â”€â”€ ROOT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
 function Services() {
   const rootRef = useRef(null);
 
@@ -1450,22 +1451,22 @@ function Services() {
         <div className="features-grid">
           {[
             {
-              icon: "◈",
+              icon: "â—ˆ",
               title: "Pixel-perfect execution",
               desc: "Every element placed with reason. We sweat the details others skip.",
             },
             {
-              icon: "⚡",
+              icon: "âš¡",
               title: "Lightning performance",
               desc: "Speed isn't a feature. It's a foundation. We build fast by design.",
             },
             {
-              icon: "◎",
+              icon: "â—Ž",
               title: "Smooth interactions",
               desc: "Interfaces that respond with grace. Motion that guides, never distracts.",
             },
             {
-              icon: "∞",
+              icon: "âˆž",
               title: "Scalable systems",
               desc: "Design systems and codebases built to grow with you, not against you.",
             },
@@ -1585,7 +1586,7 @@ function Services() {
           Ready to build something <em>unforgettable?</em>
         </h2>
         <a href="#" className="cta-btn">
-          Let's Work <span className="cta-btn-arrow">→</span>
+          Let's Work <span className="cta-btn-arrow">â†’</span>
         </a>
         <p className="cta-sub">No commitment. Just a conversation.</p>
       </section>
@@ -1594,3 +1595,4 @@ function Services() {
 }
 
 export default Services;
+

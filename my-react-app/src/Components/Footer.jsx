@@ -38,14 +38,14 @@ export default function Footer() {
             justifyContent: 'center'
           }}>
             <span style={{
-              fontFamily: "'Bebas Neue', cursive",
+              fontFamily: "'Hattrick', sans-serif",
               fontSize: 16,
               color: '#22c55e',
               textShadow: '0 0 12px rgba(34,197,94,0.5)'
             }}>C</span>
           </div>
           <span style={{
-            fontFamily: "'Bebas Neue', cursive",
+            fontFamily: "'Hattrick', sans-serif",
             fontSize: 18,
             letterSpacing: '0.1em',
             color: 'rgba(255,255,255,0.9)'

@@ -1,16 +1,26 @@
 @import "tailwindcss";
 
+.font-bebas {
+  font-family: 'Hattrick', sans-serif;
+}
+
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   overflow-x: hidden;
   overscroll-behavior-y: none;
+  height: 100%;
 }
 
 body {
+  min-height: 100%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background: #000;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 .hero-bg {
